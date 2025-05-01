@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/backend/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/backend/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/backend",
+  "projects": {
+    "backend": {
+      "type": "application",
+      "root": "apps/backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/backend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/backend/tsconfig.app.json"
+      }
+    },
+    "blogapi": {
+      "type": "application",
+      "root": "apps/blogapi",
+      "entryFile": "main",
+      "sourceRoot": "apps/blogapi/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/blogapi/tsconfig.app.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "weatherapi": {
+      "type": "application",
+      "root": "apps/weatherapi",
+      "entryFile": "main",
+      "sourceRoot": "apps/weatherapi/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/weatherapi/tsconfig.app.json"
+      }
+    }
+  }
+}
