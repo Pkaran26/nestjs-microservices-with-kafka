@@ -19,9 +19,7 @@ export class AppController {
 
   @Get('blog')
   getBlog() {
-    const xx = this.blogClient.send('blog.request', { action: 'getAll' });
-    console.log(xx);
-    return xx;
+    return this.blogClient.send('blog.request', { action: 'getAll' });
   }
 
   @Get('blog/:id')
